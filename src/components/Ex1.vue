@@ -8,18 +8,21 @@ const inArea = ref(false)
 
 function mOver() {
     // add code here
-    inArea.value = true;
+    //inArea.value = true;
+    id.value = 'circle'
 }
 
 function mOut() {
     // add code here
-    inArea.value = false;
+    //inArea.value = false;
+    id.value = 'square'
 }
 </script>
 
 <template>
     <!-- modify code below -->
-    <div :style="{'border-radius': inArea ? '50%' : '0%'}" :id=id @mouseover="mOver" @mouseout="mOut">
+    <!-- <div :style="{'border-radius': inArea ? '50%' : '0%'}" :id=id @mouseover="mOver" @mouseout="mOut"> -->
+    <div :id=id @mouseover="mOver" @mouseout="mOut">
         Mouse Over Me
     </div>
 
@@ -34,12 +37,12 @@ function mOut() {
     padding-top: 60px;
 }
 
-/* #circle {
+#circle {
     width: 150px;
     height: 150px;
     border-radius: 50%;
     background-color: goldenrod;
     text-align: center;
     padding-top: 60px;
-} */
+}
 </style>
