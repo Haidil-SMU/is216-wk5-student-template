@@ -3,7 +3,7 @@
 import { ref } from 'vue';
 
 const id = ref('square')
-const inArea = ref(false)
+//const inArea = ref(false)
 
 
 function mOver() {
