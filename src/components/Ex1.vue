@@ -2,23 +2,24 @@
 
 import { ref } from 'vue';
 
-const id = ref('circle')
+const id = ref('square')
+const inArea = ref(false)
 
 
 function mOver() {
     // add code here
-    id.value = 'square';
+    inArea.value = true;
 }
 
 function mOut() {
     // add code here
-    id.value = 'circle';
+    inArea.value = false;
 }
 </script>
 
 <template>
     <!-- modify code below -->
-    <div :id="id" @mouseover="mOver" @mouseout="mOut">
+    <div :style="{'border-radius': inArea ? '50%' : '0%'}" :id=id @mouseover="mOver" @mouseout="mOut">
         Mouse Over Me
     </div>
 
@@ -33,12 +34,12 @@ function mOut() {
     padding-top: 60px;
 }
 
-#circle {
+/* #circle {
     width: 150px;
     height: 150px;
     border-radius: 50%;
     background-color: goldenrod;
     text-align: center;
     padding-top: 60px;
-}
+} */
 </style>
