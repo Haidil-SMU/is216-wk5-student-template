@@ -39,7 +39,7 @@ function reset() {
             {{maxScore - (scoreA > scoreB ? scoreA : scoreB)}}
         </p>
         <!-- A. Event handlers go here -->
-        <div style="display: flex; gap: 12px; margin: 12px 0;">
+        <div style="display: flex; gap: 5px; margin: 12px 0;">
             <button @click="addA">+ Team A</button>
             <button @click="addB">+ Team B</button>
             <button @click="reset">Reset</button>
