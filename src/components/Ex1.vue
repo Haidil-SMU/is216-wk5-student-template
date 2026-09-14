@@ -20,7 +20,7 @@ function mOut() {
 <template>
     <!-- modify code below -->
     <!-- <div :style="{'border-radius': inArea ? '50%' : '0%'}" :id=id @mouseover="mOver" @mouseout="mOut"> -->
-    <div :id=id @mouseover="mOver" @mouseout="mOut">
+    <div :id="id" @mouseover="mOver" @mouseout="mOut">
         Mouse Over Me
     </div>
 
