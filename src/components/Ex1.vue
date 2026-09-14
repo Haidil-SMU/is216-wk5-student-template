@@ -8,13 +8,11 @@ const id = ref('square')
 
 function mOver() {
     // add code here
-    //inArea.value = true;
     id.value = 'circle'
 }
 
 function mOut() {
     // add code here
-    //inArea.value = false;
     id.value = 'square'
 }
 </script>
