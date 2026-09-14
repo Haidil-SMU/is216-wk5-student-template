@@ -2,6 +2,7 @@
 import { ref } from 'vue'
 const items = ref(['keyboard', 'mouse', 'iPhone', 'macbook', 'adapter'])
 const itemToAdd = ref("")
+const text = ref("")
 
 // TODO: Add Code Here
 
@@ -10,9 +11,10 @@ function deleteItem(item) {
     items.value.splice(index, 1)
 }
 
-function addItem(itemToAdd) {
-    items.value.push(itemToAdd);
-    console.log(items);
+function addItem() {
+    items.value.push(text.value)
+    // items.value.push(itemToAdd);
+    text.value = ''
 }
 
 </script>
@@ -28,8 +30,10 @@ function addItem(itemToAdd) {
             </li>
 
         </ul>
-        <input type="text" v-model="itemToAdd">
-        <button type="button" @click="addItem(itemToAdd)">Add</button>
+         <input v-model="text" @keyup.enter="addItem"/>
+        <button @click="addItem">Add</button>
+        <!-- <input type="text" v-model="itemToAdd">
+        <button type="button" @click="addItem(itemToAdd)">Add</button> -->
     </div>
 
    
